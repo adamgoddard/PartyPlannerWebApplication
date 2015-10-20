@@ -29,5 +29,7 @@ namespace PartyPlannerWebApplication.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<PartyPlannerWebApplication.Models.tblCustomer> tblCustomers { get; set; }
     }
 }
