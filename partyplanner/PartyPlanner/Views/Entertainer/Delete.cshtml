@@ -1,0 +1,216 @@
+﻿@model PartyPlanner.Models.Entertainer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Entertainer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Town)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Town)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsMagician)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsMagician)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsClown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsClown)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsBalloonAnimals)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsBalloonAnimals)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPettingZoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPettingZoo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCakes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsCakes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsCatering)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsCatering)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsFacePainting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsFacePainting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsJuggling)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsJuggling)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDJ)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDJ)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPartyGames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPartyGames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsBouncyCastle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsBouncyCastle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPuppets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPuppets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsHennaTattoos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsHennaTattoos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsHairBraiding)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsHairBraiding)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsOther)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsOther)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
