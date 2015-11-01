@@ -7,8 +7,6 @@
          text-align:center;
 }
 
-
-
     
 </style>
 
@@ -61,21 +59,16 @@
 
                 <img src="~/Content/Images/Ballons.png" class="img-reponsive center-block" />
 
-                <a href="#" class=" btn btn-warning btn-block">Customer Login</a>
+                @Html.ActionLink("Customer Portal", "CustomerPortal", "Customer", null, new { @class = "btn btn-warning btn-block" })
             </div>
         </div>
-
-
-
-
-
-
+        
         <div class="col-md-6">
             <div class="panel">
 
                 <img src="~/Content/Images/EntertainerLogin.bmp" class="img-reponsive center-block" />
 
-                <a href="#" class=" btn btn-warning btn-block">Entertainer Login</a>
+                @Html.ActionLink("Entertainer Portal", "EntertainerPortal", "Entertainer", null, new { @class = "btn btn-warning btn-block" })
             </div>
         </div>
 

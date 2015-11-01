@@ -20,6 +20,12 @@ namespace PartyPlanner.Controllers
             return View(db.Entertainer.ToList());
         }
 
+        //Get: Entertainer Portal
+        public ActionResult EntertainerPortal()
+        {
+            return View("EntertainerPortal");
+        }
+
         // GET: Entertainer/Details/5
         public ActionResult Details(int? id)
         {
