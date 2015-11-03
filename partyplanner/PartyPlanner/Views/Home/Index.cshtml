@@ -1,6 +1,9 @@
 ﻿@{
     ViewBag.Title = "Home Page";
-}
+    }
+
+<script src="scripts\jquery-2.1.4.min.js"></script>
+<script src="scripts\bootstrap.min.js"></script>
 
 <style>
     .dropdown-menu > li > a {
@@ -20,37 +23,45 @@
 
 
     <div class="col-sm-12 text-center">
-        <div class="dropdown">
-            <button class="btn btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                Choose Entertainer Type
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Type 1</a></li>
-                <li><a href="#">Type 2</a></li>
-                <li><a href="#">Type 3</a></li>
-            </ul>
-        </div>
-        <br />
-        <div class="dropdown">
-            <button class="btn btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                Choose Location
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Location 1</a></li>
-                <li><a href="#">Location 2</a></li>
-                <li><a href="#">Location 3</a></li>
-            </ul>
-        </div>
-        <br />
-        <div class="dropdown">
-            <button class="btn btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-                Choose Date
-            </button>
-            <ul class="dropdown-menu">
+<form action="http://google.com">
+  <h3 style="color:#F78181;font-family:Comic Sans MS"> I want a </h3>
 
-                <li><a href="#">Calendar</a></li>
-            </ul>
-        </div>
+    <div class="btn-group">
+       <button type="button" data-toggle="dropdown" class="btn btn-info btn-lg dropdown-toggle">Entertainer <span class="caret"></span></button> 
+      <ul class="dropdown-menu">
+        <li><a href="#">Magican</a></li>
+        <li><a href="#">Juggler</a></li>
+        <li><a href="#">Comedian</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Other</a></li>
+      </ul>
+    </div>
+
+  <h3 style="color:#F78181;font-family:Comic Sans MS"> Located In </h3>
+
+    <div class="btn-group">
+      <button type="button" data-toggle="dropdown" class="btn btn-success btn-lg dropdown-toggle">Location <span class="caret"></span></button> 
+      <ul class="dropdown-menu">
+        <li><a href="#">Dublin</a></li>
+        <li><a href="#"> Cork </a></li>
+        <li><a href="#">Galway</a></li>
+
+        <li class="divider"></li>
+        <li><a href="#">Other</a></li>
+      </ul>
+    </div>
+
+<br />
+<br />
+<h3 style="color:#F78181;font-family:Comic Sans MS"> Clci Below to Search </h3>
+<br />
+
+<a class="btn btn-danger btn-warning btn-lg" href="http://www.google.ie" role="button" font size="15">Search</a>
+  
+  
+  
+</form>
+        
     </div>
 
     <div class="row">
@@ -73,3 +84,4 @@
         </div>
 
     </div>
+
