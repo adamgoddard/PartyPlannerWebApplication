@@ -8,9 +8,13 @@ namespace PartyPlanner.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+       public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("NewIndex");
+        }
+
+        public ActionResult NewIndex(){
+            return View("Index");
         }
 
         public ActionResult About()
