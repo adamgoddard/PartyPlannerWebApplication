@@ -129,5 +129,10 @@ namespace PartyPlanner.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
     }
 }

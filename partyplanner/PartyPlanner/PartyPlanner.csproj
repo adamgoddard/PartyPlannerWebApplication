@@ -263,6 +263,7 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Entertainer\EntertainerPortal.cshtml" />
     <Content Include="Views\Customer\CustomerPortal.cshtml" />
+    <Content Include="Views\Customer\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
