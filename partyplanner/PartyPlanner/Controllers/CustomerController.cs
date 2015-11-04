@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PartyPlanner.Models;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 
 namespace PartyPlanner.Controllers
 {
@@ -134,5 +136,36 @@ namespace PartyPlanner.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Login(Customer customer, string returnUrl)
+        {
+            using (ApplicationDbContext db = new ApplicationDbContext())
+            {
+                try
+                {
+
+
+                    var cust = db.Customers.Single(e => e.Email == customer.Email && e.Password == customer.Password);
+                    if (cust != null)
+                    {
+                        Session["id"] = cust.id.ToString();
+                        Session["FirstName"] = cust.FirstName.ToString();
+                        return RedirectToAction("Index");
+                    }
+
+                }
+                catch
+                {
+
+                        ModelState.AddModelError("", "Username or Password is Incorrect!");
+                    }
+
+ 
+            }
+            // If we got this far, something failed, redisplay form
+            return View();
+        }
+
     }
 }

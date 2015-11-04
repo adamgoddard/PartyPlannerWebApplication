@@ -30,5 +30,6 @@ namespace PartyPlanner.Models
         }
 
         public System.Data.Entity.DbSet<PartyPlanner.Models.Entertainer> Entertainers { get; set; }
+        public System.Data.Entity.DbSet<PartyPlanner.Models.Customer> Customers { get; set; }
     }
 }
