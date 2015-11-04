@@ -10,8 +10,6 @@ namespace PartyPlanner.Models
     {
         public int id { get; set; }
 
-        public int CustomerId { get; set; }
-
         public string Username { get; set; }
 
         public string Email { get; set; }
@@ -78,8 +76,6 @@ namespace PartyPlanner.Models
 
         [Display(Name = "Other?")]
         public bool IsOther { get; set; }
-
-        
 
     }
 }

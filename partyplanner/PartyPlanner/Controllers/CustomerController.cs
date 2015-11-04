@@ -151,25 +151,7 @@ namespace PartyPlanner.Controllers
                     {
                         Session["id"] = cust.id.ToString();
                         Session["FirstName"] = cust.FirstName.ToString();
-
-                      /*  var ents = db.Entertainers.ToArray();
-                        var numOfEnts = ents.Count();
-
-                        for(int i=0; i < numOfEnts; i++)
-                        {
-                            if( ents[numOfEnts].CustomerId == cust.id)
-                            {
-                                return RedirectToAction("Index", "Enterainer");
-
-                            }
-                        }
-
-    */
-
-
-
                         return RedirectToAction("Index");
-
                     }
 
                 }
