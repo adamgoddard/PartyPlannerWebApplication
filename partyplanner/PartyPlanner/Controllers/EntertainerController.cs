@@ -52,18 +52,38 @@ namespace PartyPlanner.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,Username,Email,Password,FirstName,LastName,Street,Town,City,PhoneNumber,IsMagician,IsClown,IsBalloonAnimals,IsPettingZoo,IsCakes,IsCatering,IsFacePainting,IsJuggling,IsDJ,IsPartyGames,IsBouncyCastle,IsPuppets,IsHennaTattoos,IsHairBraiding,IsOther")] Entertainer entertainer)
+        public ActionResult Create([Bind(Include = "id,Username,Email,Password,FirstName,LastName,Street,Town,City,PhoneNumber,IsMagician,IsClown,IsBalloonAnimals,IsPettingZoo,IsCakes,IsCatering,IsFacePainting,IsJuggling,IsDJ,IsPartyGames,IsBouncyCastle,IsPuppets,IsHennaTattoos,IsHairBraiding,IsOther, CustomerId")] Entertainer entertainer)
         {
             if (ModelState.IsValid)
             {
-                db.Entertainer.Add(entertainer);
+                Customer cust = new Customer();
+
+                cust.City = entertainer.City;
+                cust.Email = entertainer.Email;
+                cust.FirstName = entertainer.FirstName;
+                cust.LastName = entertainer.LastName;
+                cust.Username = entertainer.Username;
+                cust.Password = entertainer.Password;
+                cust.Street = entertainer.Street;
+                cust.Town = entertainer.Town;
+                cust.PhoneNumber = entertainer.PhoneNumber;
+
+                db.Customer.Add(cust);
                 db.SaveChanges();
+
+                    entertainer.CustomerId = cust.id;
+
+                    db.Entertainer.Add(entertainer);
+
+                    db.SaveChanges();
+                
+
                 return RedirectToAction("Index");
             }
 
             return View(entertainer);
         }
-
+        // ,IsMagician,IsClown,IsBalloonAnimals,IsPettingZoo,IsCakes,IsCatering,IsFacePainting,IsJuggling,IsDJ,IsPartyGames,IsBouncyCastle,IsPuppets,IsHennaTattoos,IsHairBraiding,IsOther
         // GET: Entertainer/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -129,5 +149,6 @@ namespace PartyPlanner.Controllers
             }
             base.Dispose(disposing);
         }
+
+        }
     }
-}
